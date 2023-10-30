@@ -26,7 +26,7 @@ const divStyle = {
   textAlign:"center"
 }
 
-const divElm = <div style={divStyle}>hello abc chi do </div>
+const divElm = <div style={divStyle}>hello </div>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
