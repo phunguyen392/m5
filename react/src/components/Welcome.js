@@ -1,7 +1,12 @@
-function Welcome(props) {
-    console.log(props);
-    return (
-        <h1>Hello: {props.name}</h1>
-    );
+//Import react vào trong dự án
+import React from "react";
+ 
+const Welcome = function(props) {
+  return (
+    <div>
+      <h1>Welcome ! I am a functional component </h1>
+    </div>
+  )
 }
+ 
 export default Welcome;
