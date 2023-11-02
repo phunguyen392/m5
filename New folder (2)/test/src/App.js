@@ -6,9 +6,12 @@ import Exemple from './components/useEffec';
 import Maytinh1 from './components/MayTinh1';
 import MayTinh2 from './components/MayTinh2';
 import Car from './components/Car';
+import TodoList from './components/TodoList';
+
 //form
 import MyForm from './components/form/dk_render';
 import AddForm from './components/form/dk_render';
+
 
 
 function App() {
@@ -23,7 +26,8 @@ function App() {
     {/* <MayTinh2/> */}
     {/* <Car/> */}
     {/* <MyForm/> */}
-    <AddForm/>
+    {/* <AddForm/> */}
+    <TodoList/>
 </div>
   );
 }
