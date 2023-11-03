@@ -11,6 +11,7 @@ import TodoList from './components/TodoList';
 //form
 import MyForm from './components/form/dk_render';
 import AddForm from './components/form/dk_render';
+import Form2 from './components/form/form2';
 
 
 
@@ -27,7 +28,8 @@ function App() {
     {/* <Car/> */}
     {/* <MyForm/> */}
     {/* <AddForm/> */}
-    <TodoList/>
+    {/* <TodoList/> */}
+    <Form2/>
 </div>
   );
 }
