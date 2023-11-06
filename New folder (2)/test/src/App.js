@@ -9,9 +9,11 @@ import Car from './components/Car';
 import TodoList from './components/TodoList';
 
 //form
-import MyForm from './components/form/dk_render';
+import MyForm1 from './components/form/dk_render';
 import AddForm from './components/form/dk_render';
-import Form2 from './components/form/form2';
+// import Form2 from './components/form/form2';
+// import ValidationSchemaExample from './components/form/ValidationSchema';
+import Lol from './components/Todo';
 
 
 
@@ -29,7 +31,10 @@ function App() {
     {/* <MyForm/> */}
     {/* <AddForm/> */}
     {/* <TodoList/> */}
-    <Form2/>
+    {/* <Form2/> */}
+    {/* <ValidationSchemaExample/> */}
+    <Lol/>
+    <TodoFormik/>
 </div>
   );
 }
