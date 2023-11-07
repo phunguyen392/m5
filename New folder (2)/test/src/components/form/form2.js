@@ -14,6 +14,12 @@ export default function Form2() {
       [event.target.name]: event.target.value
     });
   }
+function handleDelete(e){
+  setForm({
+    ...form,
+    [e.target.name]:e.target.value
+  });
+}
 
   function handleValidate() {
     const errors = {};
@@ -77,4 +83,6 @@ export default function Form2() {
       </Formik>
     </div>
   );
+div*3
+
 }

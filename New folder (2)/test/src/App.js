@@ -11,9 +11,7 @@ import TodoList from './components/TodoList';
 //form
 import MyForm from './components/form/dk_render';
 import AddForm from './components/form/dk_render';
-import Form2 from './components/form/form2';
-
-
+import TestRoute from './components/TestRoute';
 
 function App() {
   return (
@@ -28,8 +26,9 @@ function App() {
     {/* <Car/> */}
     {/* <MyForm/> */}
     {/* <AddForm/> */}
-    {/* <TodoList/> */}
-    <Form2/>
+    
+    {/* <Form2/> */}
+    <TestRoute/>
 </div>
   );
 }
