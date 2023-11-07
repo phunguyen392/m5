@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Formik} from 'formik'; 
 
-function MyForm() {
+function MyForm1() {
   const [username, setUsername] = useState("");
   const handleChange = event => setUsername(event.target.value);
   let header;
@@ -19,4 +19,4 @@ function MyForm() {
   );
 }
 
-export default MyForm;
+export default MyForm1;

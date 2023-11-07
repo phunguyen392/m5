@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Formik } from "formik";
 
-export default function Form2() {
+ function Form2() {
   const REGEX = {
     email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
   };
@@ -83,6 +83,11 @@ function handleDelete(e){
       </Formik>
     </div>
   );
+<<<<<<< HEAD
 div*3
 
 }
+=======
+}
+export default Form2
+>>>>>>> 1e6c9274619dc436baca3ddbc96ee17ea9094f3a
