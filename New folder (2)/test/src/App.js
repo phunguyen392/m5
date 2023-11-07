@@ -22,8 +22,6 @@ import TestRoute from "./components/TestRoute";
 import Create from "./components/pages/Create";
 import List from "./components/pages/List";
 import Edit from "./components/pages/Edit";
-//net.js
-import Link from 'next/link';
 
 
 function App() {
@@ -51,7 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<List />} />
           <Route path="/Create" element={<Create />} />
-          <Route path="/Edit" element={<Edit />} />
+          <Route path="/Edit/:id" element={<Edit />} />
         </Routes>
       </BrowserRouter>
     </div>
