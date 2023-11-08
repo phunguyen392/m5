@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.heading{
+  color: rgb(128, 0, 73);
+}
+.link{
+  color: aqua;
+  text-align: right;
+}

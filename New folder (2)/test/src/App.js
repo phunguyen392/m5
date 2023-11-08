@@ -1,25 +1,25 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, JSON } from "react-router-dom";
 
-import MayTinh from "./components/MayTinh";
-import Counter from "./components/trien_khai_useState";
-import bt1 from "./components/bt1";
-import Exemple from "./components/useEffec";
-import Maytinh1 from "./components/MayTinh1";
-import MayTinh2 from "./components/MayTinh2";
-import Car from "./components/Car";
-import TodoList from "./components/TodoList";
+import MayTinh from "./components/vd/MayTinh";
+import Counter from "./components/vd/trien_khai_useState";
+import bt1 from "./components/vd/bt1";
+import Exemple from "./components/vd/useEffec";
+import Maytinh1 from "./components/vd/MayTinh1";
+import MayTinh2 from "./components/vd/MayTinh2";
+import Car from "./components/vd/Car";
+import TodoList from "./components/vd/TodoList";
 
 //form
-import MyForm from './components/form/dk_render';
-import AddForm from './components/form/dk_render';
-import TestRoute from './components/TestRoute';
+// import MyForm from './components/form/dk_render';
+// import AddForm from './components/form/dk_render';
+import TestRoute from './components/vd/TestRoute';
 import MyForm1 from "./components/form/dk_render";
-import AddForm from "./components/form/dk_render";
+// import AddForm from "./components/form/dk_render";
 // import Form2 from './components/form/form2';
 // import ValidationSchemaExample from './components/form/ValidationSchema';
-import Lol from "./components/Todo";
-import TestRoute from "./components/TestRoute";
+import Lol from "./components/vd/Todo";
+// import TestRoute from "./components/TestRoute";
 
 //crud
 import Create from "./components/pages/Create";

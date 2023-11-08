@@ -77,7 +77,7 @@ function Edit(props) {
                         ) : null}
 
                         <label htmlFor="price">Price</label>
-                        <Field name="price" />
+                        <Field type="number" name="price" />
                         {errors.price && touched.price ? (
                             <div>{errors.price}</div>
                         ) : null}
