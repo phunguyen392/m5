@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-const ToDoList = () => {
+
+
+
+const TodoList = () => {
   const [job, setJobs] = useState([]);
   const validationSchema = Yup.object({
     title: Yup.string().required('What`s your job?'),
@@ -56,6 +59,7 @@ const ToDoList = () => {
           </div>
           <button type="submit" className="btn btn-primary">Add</button>
         </form>
+          <h1>JobList</h1>
         <table className="table mt-3">
           <thead>
             <tr>
@@ -76,7 +80,7 @@ const ToDoList = () => {
     </div>
   );
 };
-export default ToDoList;
+export default TodoList;
 
 
 

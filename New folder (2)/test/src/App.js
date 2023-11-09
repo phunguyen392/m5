@@ -8,7 +8,7 @@ import Exemple from "./components/vd/useEffec";
 import Maytinh1 from "./components/vd/MayTinh1";
 import MayTinh2 from "./components/vd/MayTinh2";
 import Car from "./components/vd/Car";
-import TodoList from "./components/vd/TodoList";
+import TodoList1 from "./components/vd/TodoList1";
 
 //form
 // import MyForm from './components/form/dk_render';
@@ -18,7 +18,7 @@ import MyForm1 from "./components/form/dk_render";
 // import AddForm from "./components/form/dk_render";
 // import Form2 from './components/form/form2';
 // import ValidationSchemaExample from './components/form/ValidationSchema';
-import Lol from "./components/vd/Todo";
+import TodoList from "./components/TodoList";
 // import TestRoute from "./components/TestRoute";
 
 //crud
@@ -41,19 +41,23 @@ function App() {
       {/* <Car/> */}
       {/* <MyForm/> */}
       {/* <AddForm/> */}
-      {/* <TodoList/> */}
+      < TodoList />
       {/* <Form2/> */}
       {/* <ValidationSchemaExample/> */}
       {/* <Lol/> */}
-      {/* <TodoFormik/> */}
+      {/* < TodoFomik /> */}
 
       {/* <TestRoute/> */}
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<List />} />
+          
+          {/* <Route path="/" element={<List />} />
           <Route path="/Create" element={<Create />} />
-          <Route path="/Edit/:id" element={<Edit />} />
+          <Route path="/Edit/:id" element={<Edit />} /> */}
+
+
+          
         </Routes>
       </BrowserRouter>
     </div>
