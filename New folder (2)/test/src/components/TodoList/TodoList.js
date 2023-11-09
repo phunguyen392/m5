@@ -15,9 +15,12 @@ const TodoList = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>JobList</h1>
-      <table className="container" border="1">
+      <Link className="btn btn-primary" to={"/create"}>
+        Create
+      </Link>
+      <table className="table" border="">
         <thead>
           <tr>
             <th>ID</th>
@@ -28,7 +31,7 @@ const TodoList = (props) => {
         <tbody>
           {items.length
             ? items.map((item) => (
-                <tr >
+                <tr>
                   <td> {item.id} </td>
                   <td> {item.job} </td>
                   <td> {item.status} </td>

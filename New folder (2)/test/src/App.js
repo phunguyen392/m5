@@ -28,6 +28,9 @@ import MyForm1 from "./components/form/dk_render";
 //to do list
 import TodoList from "./components/TodoList/TodoList";
 import Edit from  "./components/TodoList/Edit";
+import Create from  "./components/TodoList/Create";
+import Delete from "./components/TodoList/Delete";
+
 
 
 function App() {
@@ -62,8 +65,12 @@ function App() {
           <Route path="/Create" element={<Create />} />
           <Route path="/Edit/:id" element={<Edit />} /> */}
 
-          <Route path="/" element={<TodoList/>} />
+          <Route path="/" element={< TodoList />} />
           <Route path="/Edit/:id" element={< Edit />} />
+          <Route path="/Create" element={< Create />} />
+          <Route path="/Delete/:id" element={< Delete />} />
+
+
           
         </Routes>
       </BrowserRouter>
