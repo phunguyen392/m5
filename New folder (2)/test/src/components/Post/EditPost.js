@@ -2,16 +2,16 @@ import React,{useState, useEffect} from 'react'
 import * as Yup from "yup";
 import { Form, Field, Formik } from "formik";
 import {  Link, useNavigate, useParams } from 'react-router-dom';
-import Job from "../../models/Job";
+import Book from "../../models/Book";
 
 
 
 
 const rules = Yup.object().shape(
     {
-        job:Yup.string()
+        title:Yup.string()
         .required("..."),
-        status:Yup.string()
+        quantity:Yup.string()
         .required("...")
 
     }
@@ -22,25 +22,25 @@ function Edit (props){
    
     const [id,setId] = useState(0);
     const [formData,setFormData] = useState({
-        'job':'',
-        'status':''
+        'title':'',
+        'quantity':''
     });
 
 //chay 1 lan
 useEffect ( () =>{
         setId(params.id);
 
-        Job.find(params.id).then((res)=>{
+        Book.find(params.id).then((res)=>{
                 setFormData(res.data);
         })
     },[])
 
     const handleSubmit = (values) => {
         let data = values;
-        Job.update( params.id, data ).then( (res) => {
-            alert('Thành công')
+        Book.update( params.id, data ).then( (res) => {
+            alert('chỉnh sửa book thành công')
             // Chuyển hướng
-            navigate("/todolist")
+            navigate("/post")
         }).catch( (res) => {
             alert('Thất bại')
         })
@@ -57,20 +57,20 @@ useEffect ( () =>{
             >
                 {({ errors, touched }) => (
                     <Form>
-                        <label htmlFor="job">Job</label><br/>
-                        <Field name="job" />
-                        {errors.job && touched.job ? (
-                            <div>{errors.job}</div>
+                        <label htmlFor="title">title</label><br/>
+                        <Field name="title" />
+                        {errors.title && touched.title ? (
+                            <div>{errors.title}</div>
                         ) : null}
 <br/>
-                        <label htmlFor="status">Status</label><br/>
-                        <Field name="status" />
-                        {errors.status && touched.status ? (
-                            <div>{errors.status}</div>
+                        <label htmlFor="quantity">quantity</label><br/>
+                        <Field name="quantity" />
+                        {errors.quantity && touched.quantity ? (
+                            <div>{errors.quantity}</div>
                         ) : null}
 <br/>
-                        <button className='btn btn-success' type="submit">Submit</button>
-                        <Link to="/TodoList" className="btn btn-secondary" >Back</Link>
+                        <button className='btn btn-success' type="submit">Save</button>
+                        <Link to="/post" className="btn btn-secondary" >Back</Link>
 
                     </Form>
                 )}

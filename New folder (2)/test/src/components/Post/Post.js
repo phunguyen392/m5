@@ -1,32 +1,32 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import Job from "../../models/Job";
+import Book from "../../models/Book";
 import { Link } from "react-router-dom";
 
-const TodoList = (props) => {
+const Post = (props) => {
   //lv voi dl
   const [items, setItems] = useState([]);
   //chay 1 lan
   useEffect(() => {
     //goi api co dl tra ve
-    Job.all().then((res) => {
+    Book.all().then((res) => {
       setItems(res.data);
     });
   }, []);
 
   return (
     <div className="container">
-      <h1>JobList</h1>
-      <Link className="btn btn-primary" to={"Create"}>
-        Create
+      <h1>PostList</h1>
+      <Link className="btn btn-success" to={"Create"}>
+      Add a new Book
       </Link>
       <table className="table" border="">
         <thead>
           <tr>
             <th>ID</th>
-            <th>Job</th>
-            <th>status</th>
-            <th>action</th>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Action</th>
 
           </tr>
         </thead>
@@ -35,14 +35,14 @@ const TodoList = (props) => {
             ? items.map((item) => (
                 <tr>
                   <td> {item.id} </td>
-                  <td> {item.job} </td>
-                  <td> {item.status} </td>
+                  <td> {item.title} </td>
+                  <td> {item.quantity} </td>
                   <td>
                     {" "}
-                    <Link to={"edit/" + item.id}>Edit</Link>{" "}
+                    <Link className="btn btn-info" to={"edit/" + item.id}>Edit</Link>{" "}
                   
                     {" "}
-                    <Link to={"delete/" + item.id}>Delete</Link>{" "}
+                    <Link className="btn btn-danger" to={"delete/" + item.id}>Delete</Link>{" "}
                   </td>
                 </tr>
               ))
@@ -53,4 +53,4 @@ const TodoList = (props) => {
   );
 };
 
-export default TodoList;
+export default Post;

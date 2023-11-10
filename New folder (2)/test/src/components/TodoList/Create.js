@@ -28,7 +28,7 @@ function Create(props) {
         Job.store( data ).then( (res) => {
             alert('Thêm thành công');
             // Chuyển hướng
-            navigate("/")
+            navigate("/todolist")
         }).catch( (res) => {
             alert('Thêm thất bại')
         })
@@ -58,7 +58,7 @@ function Create(props) {
                         ) : null}
 <br/>
                         <button className="btn btn-success" type="submit">Submit</button>
-                        <Link to="/" className="btn btn-secondary" >Back</Link>
+                        <Link to="/TodoList" className="btn btn-secondary" >Back</Link>
                     </Form>
                 )}
             </Formik>

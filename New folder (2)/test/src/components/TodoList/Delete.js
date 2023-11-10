@@ -12,7 +12,7 @@ function Delete(props) {
         Job.destroy(id).then((res) => {
             alert('Thành công');
             // Chuyển hướng
-            navigate("/")
+            navigate("/todolist")
         }).catch((res) => {
             alert('Thất bại');
         })
@@ -22,7 +22,7 @@ function Delete(props) {
         <div>
            <h1>Delete</h1> 
            <button className='btn btn-danger' onClick={ () => handleDelete( params.id ) }>Xóa</button>
-           <Link className='btn btn-info' to={'/'}>List</Link>
+           <Link className='btn btn-info' to={'/TodoList'}>List</Link>
         </div>
     );
 }
