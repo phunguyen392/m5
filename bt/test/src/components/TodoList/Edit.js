@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import * as Yup from "yup";
 import { Form, Field, Formik } from "formik";
-import {  useNavigate, useParams } from 'react-router-dom';
+import {  Link, useNavigate, useParams } from 'react-router-dom';
 import Job from "../../models/Job";
 
 
@@ -11,8 +11,8 @@ const rules = Yup.object().shape(
     {
         job:Yup.string()
         .required("..."),
-        status:Yup.number()
-        .required("hay nhap so")
+        status:Yup.string()
+        .required("...")
 
     }
 );
@@ -40,7 +40,7 @@ useEffect ( () =>{
         Job.update( params.id, data ).then( (res) => {
             alert('Thành công')
             // Chuyển hướng
-            navigate("/")
+            navigate("/todolist")
         }).catch( (res) => {
             alert('Thất bại')
         })
@@ -48,7 +48,7 @@ useEffect ( () =>{
 
     return (
         <div>
-            <h1>Edit</h1>
+            <h1>Edit {id} </h1>
             <Formik
                 initialValues={formData}
                 validationSchema={rules}
@@ -63,13 +63,15 @@ useEffect ( () =>{
                             <div>{errors.job}</div>
                         ) : null}
 <br/>
-                        <label htmlFor="status">Price1</label><br/>
+                        <label htmlFor="status">Status</label><br/>
                         <Field name="status" />
                         {errors.status && touched.status ? (
                             <div>{errors.status}</div>
                         ) : null}
 <br/>
-                        <button type="submit">Submit</button>
+                        <button className='btn btn-success' type="submit">Submit</button>
+                        <Link to="/TodoList" className="btn btn-secondary" >Back</Link>
+
                     </Form>
                 )}
             </Formik>

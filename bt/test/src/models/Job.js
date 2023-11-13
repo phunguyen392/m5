@@ -38,15 +38,36 @@ class Job {
 
   //sua
   update( id, data ){
-		return new Promise( (reslove, reject) => {
+		return new Promise( (resolve, reject) => {
 			axios.put( this.api_url + '/' + id , data ).then( (res) => {
-				reslove(res)
+				resolve(res)
+			}).catch( (res) => {
+				reject(res);
+			});
+		})
+	}
+//them moi
+	
+	store( data ){
+		return new Promise( (resolve, reject) => {
+			axios.post( this.api_url , data ).then( (res) => {
+				resolve(res)
 			}).catch( (res) => {
 				reject(res);
 			});
 		})
 	}
 
+  //xoa
+	destroy( id ){
+		return new Promise( (resolve, reject) => {
+			axios.delete( this.api_url + '/' + id ).then( (res) => {
+				resolve(res)
+			}).catch( (res) => {
+				reject(res);
+			});
+		})
+	}
 
 }
 
